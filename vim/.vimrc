@@ -10,12 +10,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " Bundles
 Plugin 'bling/vim-airline'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/a.vim'
 Plugin 'Rykka/riv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'justinmk/vim-sneak'
@@ -26,6 +22,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
+Plugin 'altercation/vim-colors-solarized'
 
 """"""""""""""""""""""""""""""""""""""""
 " # General stuff
@@ -34,7 +31,7 @@ Plugin 'tpope/vim-speeddating'
 set shell=/bin/bash
 
 " Enable syntax highlighting
-syntax on
+syntax enable
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -67,20 +64,9 @@ set ruler
 " Enable cursor line
 set cursorline
 
-" YCM config
-" let g:ycm_confirm_extra_conf = 0
-
 " Limit syntax highlighting
 let g:tex_conceal = ""
 syntax sync minlines=256
-
-""""""""""""""""""""""""""""""""""""""""
-" # Ultisnips/YCM compatability
-""""""""""""""""""""""""""""""""""""""""
-let g:ycm_key_list_previous_completion=['<Up>']
-
-let g:UltiSnipsExpandTrigger="<c-tab>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
 
 """"""""""""""""""""""""""""""""""""""""
 " # Airline
@@ -91,22 +77,17 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""
 " # Color
 """"""""""""""""""""""""""""""""""""""""
-colorscheme jellybeans
-" set background=dark
-" hi Normal ctermbg=none
-" hi NonText ctermbg=none
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=16
 
 """"""""""""""""""""""""""""""""""""""""
 " # Key bindings
 """"""""""""""""""""""""""""""""""""""""
-nnoremap <silent><F3> :A<CR>
-nnoremap <silent><F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <silent><F6> :make<CR>
-nnoremap <silent><F7> :!./a.out<CR>
 " nnoremap <silent><F9> :RainbowParenthesesToggle<CR>
 nnoremap <silent><F10> :NERDTreeFocus<CR>
 nnoremap <silent><F11> :NERDTreeToggle<CR>
-nnoremap <silent><F12> :TagbarToggle<CR>
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -116,11 +97,3 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 """"""""""""""""""""""""""""""""""""""""
 " Indentation settings for cindent
 set cinoptions=l1,g0,(0,u0,U0
-
-""""""""""""""""""""""""""""""""""""""""
-" # cwb.vim
-""""""""""""""""""""""""""""""""""""""""
-" let g:CWBPath = "/home/knas/cwb/xccscwb.x86-linux"
-" au FileType cwb nnoremap <silent><F5> :OpenInCWB <CR>
-" au FileType cwb nnoremap <silent><F6> :OpenAndRunCommandInCWB <CR>
-
