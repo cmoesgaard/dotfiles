@@ -1,4 +1,4 @@
-    """"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
 " # Vundle
 """"""""""""""""""""""""""""""""""""""""
 set nocompatible
@@ -15,14 +15,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Rykka/riv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'justinmk/vim-sneak'
-Plugin 'wannesm/wmnusmv.vim'
-Plugin 'burnettk/vim-angular'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
-Plugin 'altercation/vim-colors-solarized'
 
 """"""""""""""""""""""""""""""""""""""""
 " # General stuff
@@ -43,9 +37,6 @@ set softtabstop=4
 
 " Show line numbers
 set number 
-
-" Font
-set guifont=Inconsolata\ 10
 
 " Disable backup stuff
 set nobackup
@@ -78,14 +69,10 @@ let g:airline_powerline_fonts = 1
 " # Color
 """"""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=16
 
 """"""""""""""""""""""""""""""""""""""""
 " # Key bindings
 """"""""""""""""""""""""""""""""""""""""
-nnoremap <silent><F6> :make<CR>
-" nnoremap <silent><F9> :RainbowParenthesesToggle<CR>
 nnoremap <silent><F10> :NERDTreeFocus<CR>
 nnoremap <silent><F11> :NERDTreeToggle<CR>
 
