@@ -14,9 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'Rykka/riv.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'justinmk/vim-sneak'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
+Plugin 'vimwiki/vimwiki'
 
 """"""""""""""""""""""""""""""""""""""""
 " # General stuff
