@@ -29,8 +29,8 @@ font pango:Dejavu Sans Mono Bold 8
 gaps inner 10
 
 set $unfocused #404040
-set $focused #EC008C
-set $indicator #F15CB3
+set $focused #D247D0
+set $indicator #DF7CC6
 
 # class                 border  	backgr. 	text    	indicator 	child_border
 client.focused          $focused	$focused 	#ffffff		$indicator   	$focused
