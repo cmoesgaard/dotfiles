@@ -28,16 +28,17 @@ font pango:Dejavu Sans Mono Bold 8
 
 gaps inner 10
 
-set $unfocused #404040
-set $focused #D247D0
-set $indicator #DF7CC6
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
-# class                 border  	backgr. 	text    	indicator 	child_border
-client.focused          $focused	$focused 	#ffffff		$indicator   	$focused
-client.focused_inactive $unfocused 	$unfocused 	#ffffff 	$unfocused   	$unfocused
-client.unfocused        $unfocused 	$unfocused 	#ffffff 	#ffffff   	$unfocused
+# class                 border  backgr. text indicator child_border
+client.focused          $fg     $fg     $bg  $fg       $fg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-client.background       $focused
+client.background       $bg
 
 default_border pixel 5
 default_floating_border pixel 5
@@ -83,7 +84,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+ae split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
