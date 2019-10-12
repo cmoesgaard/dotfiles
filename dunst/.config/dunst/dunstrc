@@ -1,5 +1,5 @@
 [global]
-font = Roboto Mono for Powerline 10
+font = Hack Nerd Font 9
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -178,27 +178,15 @@ history = ctrl+grave
 # Context menu.
 context = ctrl+shift+period
 
-[urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#af6aae"
-foreground = "#af6aae"
-background = "#1d1f21"
-#background = "#2B313C"
+[urgency_low]
 timeout = 4
 
 [urgency_normal]
-frame_color = "#d247d0"
-foreground = "#d247d0"
-background = "#1d1f21"
-#background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#e7267f"
-foreground = "#e7267f"
-background = "#1d1f21"
-#background = "#2B313C"
 timeout = 8
 
 
