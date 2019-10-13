@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Rykka/riv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vimwiki/vimwiki'
+Plugin 'dylanaraps/wal.vim'
 
 """"""""""""""""""""""""""""""""""""""""
 " # General stuff
@@ -66,6 +67,7 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""
 " # Color
 """"""""""""""""""""""""""""""""""""""""
+colorscheme wal
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""
