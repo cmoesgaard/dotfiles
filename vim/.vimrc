@@ -13,7 +13,6 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'dylanaraps/wal.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
@@ -68,7 +67,6 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""
 " # Color
 """"""""""""""""""""""""""""""""""""""""
-colorscheme wal
 set background=dark
 
 """"""""""""""""""""""""""""""""""""""""
