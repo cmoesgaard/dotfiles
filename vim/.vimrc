@@ -12,10 +12,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'Rykka/riv.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vimwiki/vimwiki'
 Plugin 'dylanaraps/wal.vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
 
 """"""""""""""""""""""""""""""""""""""""
 " # General stuff
