@@ -2,14 +2,14 @@
 The repo is made with [GNU Stow](https://www.gnu.org/software/stow/) in mind.
 Each individual configuration can be applied and symlinked with the following command:
 ```
-stow {{DIR}}
+stow -t ~/ {{DIR}}
 ```
 Where `{{DIR}}` is the name of one of the directories, e.g. `vim`
 
 Alternatively, everything can be applied at once with the following:
 
 ```
-ls -d */ | xargs stow
+ls -d */ | xargs stow -t ~/
 ```
 
 ## Vim config
