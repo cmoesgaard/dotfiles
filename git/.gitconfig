@@ -1,0 +1,7 @@
+[user]
+	email = christoffer@magenta.dk
+	name = Christoffer Moesgaard
+[core]
+	editor = vim
+[pull]
+	rebase = true
