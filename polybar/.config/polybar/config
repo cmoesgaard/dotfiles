@@ -25,74 +25,69 @@ primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color5:#222}
 alert = ${xrdb:color3:#222}
 
+nord0 = #2e3440
+nord1 = #3b4252
+nord2 = #434c5e
+nord3 = #4c566a
+nord4 = #d8dee9
+nord5 = #e5e9f0
+nord6 = #eceff4
+nord7 = #8fbcbb
+nord8 = #88c0d0
+nord9 = #81a1c1
+nord10 = #5e81ac
+nord11 = #bf616a 
+nord12 = #d08770
+nord13 = #ebcb8b
+nord14 = #a3be8c
+nord15 = #b48ead
+
+[settings]
+screenchange-reload = true
+
+format-background = ${colors.nord2}
+format-padding = 1
+
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 20
-;offset-x = 1%
-;offset-y = 1%
+height = 25
 radius = 0
 fixed-center = false
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.nord1}
+foreground = ${colors.nord6}
 
 line-size = 3
-line-color = #f00
 
-border-size = 0
-border-color = #00000000
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = Hack Nerd Font:style=Regular:size=9
-font-1 = Siji:style=Regular
+font-0 = Hack Nerd Font:style=Regular:size=10;2
+font-1 = Hack Nerd Font:style=Bold:size=10;2
+font-2 = Siji:style=Regular
 
 modules-left = i3 
 modules-center = xwindow
-modules-right = filesystem xkeyboard memory cpu wlan battery date
+modules-right = xkeyboard filesystem memory cpu wlan battery date
+
+module-margin = 1
 
 tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+tray-background = ${colors.nord2}
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:40:...%
+format-underline = ${colors.nord7}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = "keyb "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.primary}
-label-layout = %layout%
-label-layout-underline = ${colors.primary}
+label-layout = "%layout%"
 
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+format-underline = ${colors.nord11}
+
 
 [module/filesystem]
 type = internal/fs
@@ -100,14 +95,16 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#FFFFFF}%mountpoint%%{F-}: %percentage_used%%
+format-mounted-underline = ${colors.nord12}
+label-mounted = %mountpoint%: %percentage_used%%
+format-unmounted-underline = ${colors.nord12}
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
+format-padding = 0
 index-sort = true
 wrapping-scroll = false
 
@@ -116,48 +113,48 @@ pin-workspaces = true
 
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-foreground = ${colors.nord1}
+label-focused-background = ${colors.nord4}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+label-unfocused-background = ${colors.nord2}
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-visible-padding = 1
+label-visible-background = ${colors.nord2}
+label-visible-underline = ${colors.nord4}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
+label-urgent = %index%
+label-urgent-underline = ${colors.nord4}
+label-urgent-background = ${colors.nord11}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
 
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = "cpu "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
-label = %percentage:2%%
-
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = "mem "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
-label = %percentage_used%%
+format-underline = ${colors.nord13}
+label = "%percentage_used%%"
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-underline = ${colors.nord14}
+format-prefix = "cpu "
+label = "%percentage:2%%"
+
 
 [module/wlan]
 type = internal/network
@@ -188,12 +185,11 @@ interval = 5
 date = "%Y-%m-%d"
 date-alt = "%Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = "%H:%M"
+time-alt = "%H:%M:%S"
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
+format-foreground = ${colors.nord6} 
+format-underline = ${colors.nord15}
 
 label = %date% %time%
 
@@ -229,16 +225,3 @@ animation-discharging-1 = d1
 animation-discharging-2 = d2
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-
-;[global/wm]
-;margin-top = 5
-;margin-bottom = 5
-
-; vim:ft=dosini
