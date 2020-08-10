@@ -30,6 +30,7 @@ window {
 
 mainbox {
   children: [inputbar, listview];
+  border: 3;
 }
 
 listview {
