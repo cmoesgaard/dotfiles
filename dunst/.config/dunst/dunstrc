@@ -120,7 +120,7 @@ line_height = 3
 # Draw a line of "separatpr_height" pixel height between two
 # notifications.
 # Set to 0 to disable.
-separator_height = 3
+separator_height = 1
 
 # Padding between text and separator.
 padding = 6
@@ -154,7 +154,7 @@ max_icon_size = 80
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
-frame_width = 0
+frame_width = 1
 frame_color = "#4C566A"
 
 [shortcuts]
@@ -183,23 +183,26 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-background = "#D8DEE9"
-foreground = "#2E3440"
+background = "#3B4252"
+foreground = "#D8DEE9"
+frame_color = "#D8DEE9"
 timeout = 4
 # Icon for notifications with low urgency, uncomment to enable
 #icon = /path/to/icon
 
 [urgency_normal]
-background = "#D8DEE9"
-foreground = "#2E3440"
 timeout = 6
+background = "#3B4252"
+foreground = "#D8DEE9"
+frame_color = "#D8DEE9"
 # Icon for notifications with normal urgency, uncomment to enable
 #icon = /path/to/icon
 
 [urgency_critical]
 background = "#BF616A"
 foreground = "#D8DEE9"
-timeout = 8
+frame_color = "#D8DEE9"
+timeout = 10
 # Icon for notifications with critical urgency, uncomment to enable
 #icon = /path/to/icon
 
