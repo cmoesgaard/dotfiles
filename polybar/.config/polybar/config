@@ -74,6 +74,16 @@ tray-position = right
 tray-background = ${colors.nord2}
 
 
+[bar/secondary]
+inherit = bar/main
+monitor = ${env:MONITOR:HDMI-1}
+
+modules-left = i3 
+modules-center = 
+modules-right = date
+
+tray-position = 
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
