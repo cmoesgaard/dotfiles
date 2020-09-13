@@ -1,7 +1,6 @@
-[user]
-	email = christoffer@magenta.dk
-	name = Christoffer Moesgaard
+[include]
+        path = ~/.gitconfig.local
 [core]
 	editor = vim
 [pull]
-	rebase = true
+        rebase = true
