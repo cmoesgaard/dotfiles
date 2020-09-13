@@ -40,7 +40,6 @@ listview {
 
 element {
   padding: 6;
-  orientation: vertical;
   text-color: @fg;
 }
 
