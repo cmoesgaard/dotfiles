@@ -4,3 +4,5 @@
 	editor = vim
 [pull]
         rebase = true
+[push]
+	default = current
