@@ -50,3 +50,8 @@ window:
   padding:
       x: 10
       y: 10
+
+scrolling:
+  # How many lines of scrollback to keep,
+  # '0' will disable scrolling.
+  history: 100000
