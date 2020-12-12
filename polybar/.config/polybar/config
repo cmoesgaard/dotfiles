@@ -62,7 +62,7 @@ line-size = 3
 
 font-0 = Hack Nerd Font:style=Regular:size=10;2
 font-1 = Hack Nerd Font:style=Bold:size=10;2
-font-2 = Siji:style=Regular
+font-2 = Noto Emoji:scale=12
 
 modules-left = i3 
 modules-center = xwindow
@@ -154,7 +154,7 @@ label-urgent-padding = 1
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "mem "
+format-prefix = "🤔 "
 format-underline = ${colors.nord13}
 label = "%percentage_used%%"
 
@@ -162,7 +162,7 @@ label = "%percentage_used%%"
 type = internal/cpu
 interval = 2
 format-underline = ${colors.nord14}
-format-prefix = "cpu "
+format-prefix = "🖥️ "
 label = "%percentage:2%%"
 
 
