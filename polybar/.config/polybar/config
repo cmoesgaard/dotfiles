@@ -66,7 +66,7 @@ font-2 = Noto Emoji:scale=12
 
 modules-left = i3 
 modules-center = xwindow
-modules-right = xkeyboard filesystem memory cpu wlan battery date
+modules-right = filesystem memory cpu wlan battery date
 
 module-margin = 1
 
@@ -89,15 +89,6 @@ type = internal/xwindow
 label = %title:0:40:...%
 format-underline = ${colors.nord7}
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = "keyb "
-label-layout = "%layout%"
-
-format-underline = ${colors.nord11}
-
 
 [module/filesystem]
 type = internal/fs
@@ -105,9 +96,9 @@ interval = 25
 
 mount-0 = /
 
-format-mounted-underline = ${colors.nord12}
+format-mounted-underline = ${colors.nord11}
 label-mounted = %mountpoint%: %percentage_used%%
-format-unmounted-underline = ${colors.nord12}
+format-unmounted-underline = ${colors.nord11}
 label-unmounted = %mountpoint% not mounted
 
 
@@ -155,13 +146,13 @@ label-urgent-padding = 1
 type = internal/memory
 interval = 2
 format-prefix = "🤔 "
-format-underline = ${colors.nord13}
+format-underline = ${colors.nord12}
 label = "%percentage_used%%"
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-underline = ${colors.nord14}
+format-underline = ${colors.nord13}
 format-prefix = "🖥️ "
 label = "%percentage:2%%"
 
@@ -170,23 +161,26 @@ label = "%percentage:2%%"
 type = internal/network
 interface = wlp2s0
 interval = 3.0
+format-underline = ${colors.nord14}
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${colors.primary}
+format-connected-underline = ${colors.nord14}
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.nord14}
+label-disconnected = ☹️
 
-ramp-signal-0 = s0
-ramp-signal-1 = s1
-ramp-signal-2 = s2
-ramp-signal-3 = s3
-ramp-signal-4 = s4
-ramp-signal-foreground = ${colors.foreground-alt}
+format-packetloss = <label-packetloss> <label-connected>
+format-packetloss-underline = ${colors.nord14}
+label-packetloss = 🚨
+
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😁
 
 [module/date]
 type = internal/date
@@ -209,29 +203,11 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.primary}
+format-charging-prefix = "🌤️ "
+format-charging-underline = ${colors.nord9}
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging-prefix = "⛈️ "
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = "full "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix = "🌞 "
 format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = r0
-ramp-capacity-1 = r1
-ramp-capacity-2 = r2
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = c0
-animation-charging-1 = c1
-animation-charging-2 = c2
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
-
-animation-discharging-0 = d0
-animation-discharging-1 = d1
-animation-discharging-2 = d2
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
