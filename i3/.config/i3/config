@@ -26,6 +26,8 @@ font pango:Dejavu Sans Mono Bold 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# i3-gaps - https://github.com/Airblader/i3#gaps
+for_window [class=".*"] border pixel 1
 gaps inner 10
 
 set $fg #D8DEE9
@@ -43,6 +45,7 @@ client.background       $bg
 
 default_border pixel 1
 default_floating_border pixel 1
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
