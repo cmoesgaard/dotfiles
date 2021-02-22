@@ -9,18 +9,23 @@ configuration {
 }
 
 * {
-  background-color: #D8DEE9;
+  bg: #D8DEE9;
   bg-alt: #434C5E;
   fg: #3B4252;
 
   nord-blue-light: #88C0D0;
   nord-yellow: #EBCB8B;
+  nord-red: #BF616A;
+  transparent: rgba(0,0,0,0);
+
+  background-color: @transparent;
 
   border: 0;
   lines: 12;
   padding: 0;
   margin: 0;
   spacing: 0;
+  text-color: @fg;
 }
 
 window {
@@ -32,10 +37,12 @@ mainbox {
   children: [inputbar, listview];
   border-color: @bg-alt;
   border: 1;
+  background-color: @background-color;
 }
 
 listview {
   columns: 1;
+  background-color: @bg;
 }
 
 element {
@@ -68,3 +75,12 @@ entry {
   text-color: @nord-yellow;
 }
 
+error-message {
+    expand: true;
+    background-color: @nord-yellow;
+    padding: 1em;
+}
+
+textbox {
+    text-color: @fg;
+}
