@@ -61,6 +61,10 @@ bindsym $mod+d exec rofi -show run
 
 # start bwmenu (rofi based bitwarden cli)
 bindsym $mod+c exec bwmenu
+
+# start zoop (rofi based emoji picker)
+bindsym $mod+x exec zoop
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
