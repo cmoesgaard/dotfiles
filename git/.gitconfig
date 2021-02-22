@@ -2,7 +2,9 @@
         path = ~/.gitconfig.local
 [core]
 	editor = vim
+        hooksPath = ~/githooks
 [pull]
         rebase = true
 [push]
 	default = current
+
