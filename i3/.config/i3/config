@@ -187,5 +187,3 @@ bindsym $mod+r mode "resize"
 mouse_warping none
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-exec setxkbmap us
