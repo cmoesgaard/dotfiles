@@ -4,4 +4,6 @@
  ((name . "(╯°□°）╯︵ ┻━┻") (aliases "tableflip"))
  ((name . "┬──┬ ノ( ゜-゜ノ)") (aliases "unflip"))
  ((name . "🎈") (aliases "balloon" "yay"))
+ ((name . "™️") (aliases "tm" "trademark"))
+ ((name . "👉🤠👉") (aliases "cowboy" "shipit"))
 )
