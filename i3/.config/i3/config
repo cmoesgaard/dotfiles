@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Dejavu Sans Mono Bold 8
+font pango:Hack Nerd Font Bold 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -27,15 +27,17 @@ font pango:Dejavu Sans Mono Bold 8
 # font, it doesn’t scale on retina/hidpi displays.
 
 # i3-gaps - https://github.com/Airblader/i3#gaps
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 3
 gaps inner 10
 
 set $fg #D8DEE9
+set $nord3 #4C566A
+set $nord9 #88C0D0
 set $bg #3B4252
 
 
 # class                 border  backgr. text indicator child_border
-client.focused          $fg     $fg     $bg  $fg       $fg
+client.focused          $nord3  $nord3  $fg  $fg       $nord3
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
@@ -43,8 +45,8 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 3
+default_floating_border pixel 3
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -57,7 +59,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -monitor -1
 
 # start bwmenu (rofi based bitwarden cli)
 bindsym $mod+c exec bwmenu
