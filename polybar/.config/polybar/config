@@ -41,11 +41,12 @@ line-size = 4
 
 font-0 = Hack Nerd Font:style=Medium:size=8;2
 font-1 = Hack Nerd Font:style=Bold:size=8;2
-font-2 = Noto Emoji:scale=12;2
+font-2 = Noto Sans CJK JP:style=Medium:size=7;2
+font-3 = Noto Emoji:scale=12;2
 
 modules-left = i3
 modules-center = 
-modules-right = laggo updates filesystem memory cpu wlan battery date
+modules-right = player-mpris-tail laggo updates filesystem memory cpu wlan battery date
 
 module-margin = 1
 
