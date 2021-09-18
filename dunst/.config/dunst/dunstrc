@@ -154,7 +154,7 @@ max_icon_size = 80
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
-frame_width = 1
+frame_width = 3
 frame_color = "#4C566A"
 
 [shortcuts]
@@ -185,7 +185,6 @@ context = ctrl+shift+period
 # Otherwise the "#" and following would be interpreted as a comment.
 background = "#3B4252"
 foreground = "#D8DEE9"
-frame_color = "#D8DEE9"
 timeout = 4
 # Icon for notifications with low urgency, uncomment to enable
 #icon = /path/to/icon
@@ -194,7 +193,6 @@ timeout = 4
 timeout = 6
 background = "#3B4252"
 foreground = "#D8DEE9"
-frame_color = "#D8DEE9"
 # Icon for notifications with normal urgency, uncomment to enable
 #icon = /path/to/icon
 
