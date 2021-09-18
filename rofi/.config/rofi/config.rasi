@@ -21,7 +21,7 @@
     nord14: #a3be8c;
     nord15: #b48ead;
 
-    font: "Hack Nerd Font 12";
+    font: "Hack Nerd Font 10";
     
     foreground:                  @nord6;
     background:                  @nord0;
@@ -54,7 +54,7 @@
     background-color: @background;
     border:           3;
     padding:          5;
-    width: 600;
+    width: 700;
 }
 #mainbox {
     border:  0;
