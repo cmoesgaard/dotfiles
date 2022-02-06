@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Hack Nerd Font Bold 8
+font pango:Iosevka Nerd Font Bold 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -31,17 +31,21 @@ for_window [class=".*"] border pixel 3
 gaps inner 10
 
 set $fg #D8DEE9
+set $nord0 #2E3440
 set $nord3 #4C566A
-set $nord9 #88C0D0
+set $nord7 #8FBCBB
+set $nord9 #81A1C1
+set $nord10 #5E81AC
+set $nord11 #BF616A
 set $bg #3B4252
 
 
-# class                 border  backgr. text indicator child_border
-client.focused          $nord3  $nord3  $fg  $fg       $nord3
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
+# class                 border  backgr. text    indicator  child_border
+client.focused          $nord10 $nord10 $fg     $nord10    $nord10
+client.focused_inactive $bg     $bg     $fg     $bg        $bg
+client.unfocused        $bg     $bg     $fg     $bg        $bg
+client.urgent           $bg     $bg     $fg     $bg        $bg
+client.placeholder      $bg     $bg     $fg     $bg        $bg
 
 client.background       $bg
 

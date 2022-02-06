@@ -21,7 +21,7 @@
     nord14: #a3be8c;
     nord15: #b48ead;
 
-    font: "Hack Nerd Font 10";
+    font: "Iosevka Nerd Font Regular 12";
     
     foreground:                  @nord6;
     background:                  @nord0;

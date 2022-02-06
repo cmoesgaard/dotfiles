@@ -6,4 +6,6 @@
  ((name . "🎈") (aliases "balloon" "yay"))
  ((name . "™️") (aliases "tm" "trademark"))
  ((name . "👉🤠👉") (aliases "cowboy" "shipit"))
+ ((name . "https://whereby.com/cmoesgaard") (aliases "whereby" "cmoesgaard"))
+ ((name . "👉👴👉") (aliases "oldman"))
 )

@@ -8,3 +8,5 @@
 [push]
 	default = current
 
+[alias]
+	sw = switch
