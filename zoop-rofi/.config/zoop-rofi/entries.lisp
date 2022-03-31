@@ -8,4 +8,5 @@
  ((name . "👉🤠👉") (aliases "cowboy" "shipit"))
  ((name . "https://whereby.com/cmoesgaard") (aliases "whereby" "cmoesgaard"))
  ((name . "👉👴👉") (aliases "oldman"))
+ ((name . "✨🇪​🇩​🇧✨") (aliases "edb"))
 )
