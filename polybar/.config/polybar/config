@@ -46,7 +46,7 @@ font-3 = Noto Emoji:scale=12;2
 
 modules-left = i3
 modules-center = 
-modules-right = player-mpris-tail laggo updates filesystem memory cpu wlan battery date
+modules-right = player-mpris-tail updates filesystem memory cpu wlan battery-1 battery-2 date
 
 module-margin = 1
 
