@@ -1,0 +1,8 @@
+! █▓▒░ fonts
+URxvt.font:     xft:Hack Nerd Font:size=9:antialias=true
+URxvt.boldFont: xft:Hack Nerd Font:size=9:bold:antialias=true
+
+! █▓▒░ interface
+*.scrollBar: false
+*.internalBorder: 10
+*.depth: 32
