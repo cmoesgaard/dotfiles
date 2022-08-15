@@ -29,19 +29,19 @@ colors:
 
 font:
   normal:
-    family: Iosevka Nerd Font
+    family: Source Code Pro
     style: Regular
 
   bold:
-    family: Iosevka Nerd Font
+    family: Source Code Pro
     style: Heavy
 
   italic:
-    family: Iosevka Nerd Font
+    family: Source Code Pro
     style: Italic
 
   bold_italic:
-    family: Iosevka Nerd Font
+    family: Source Code Pro
     style: Bold Italic
 
   size: 11

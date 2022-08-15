@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Iosevka Nerd Font Bold 8
+font pango:Source Code Pro Bold 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -70,6 +70,12 @@ bindsym $mod+c exec bwmenu
 
 # start zoop (rofi based emoji picker)
 bindsym $mod+x exec zoop
+
+# start flameshot
+bindsym $mod+Shift+s exec flameshot gui
+
+# start flameshot
+bindsym $mod+Control+Alt+l exec i3lock
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -192,4 +198,27 @@ bindsym $mod+r mode "resize"
 # Mouse should't follow output when switching screens
 mouse_warping none
 
+#############################################
+# autostart applications/services on login: #
+#############################################
+
+#get auth work with polkit-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Launch Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Set up displays
+exec --no-startup-id autorandr --change
+
+# Desktop notifications
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+
+# start blueberry app for managing bluetooth devices from tray:
+exec --no-startup-id blueberry-tray
+
+# networkmanager-applet
+exec --no-startup-id nm-applet
+
+# set wallpaper
+exec --no-startup-id sleep 2 && nitrogen --restore
