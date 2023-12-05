@@ -1,5 +1,5 @@
 #!/bin/bash
 
 nitrogen --restore
-sleep 1 && /home/cm/.config/polybar/launch.sh
+sleep 1 && ~/.config/polybar/launch.sh
 notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
