@@ -8,3 +8,4 @@ if test -z (pgrep ssh-agent | string collect)
     set -Ux SSH_AGENT_PID $SSH_AGENT_PID
 end
 
+abbr -a --set-cursor -- gpmr "git push -u -o merge_request.create -o merge_request.title=(jira)': %'"
