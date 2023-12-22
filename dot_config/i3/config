@@ -68,8 +68,11 @@ bindsym $mod+d exec rofi -show run -monitor -1
 # start bwmenu (rofi based bitwarden cli)
 bindsym $mod+c exec bwmenu
 
+# start rofimoji
+bindsym $mod+x exec rofimoji
+
 # start zoop (rofi based emoji picker)
-bindsym $mod+x exec zoop
+bindsym $mod+Shift+x exec zoop
 
 # start flameshot
 bindsym $mod+Shift+s exec flameshot gui
