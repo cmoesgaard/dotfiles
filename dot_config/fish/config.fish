@@ -1,6 +1,5 @@
 starship init fish | source
 zoxide init fish | source
-source /opt/asdf-vm/asdf.fish
 
 set fish_greeting
 
